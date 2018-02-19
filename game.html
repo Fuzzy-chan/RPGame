@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Main Game</title>
+        <link rel="stylesheet" type="text/css" href="Assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row" >
+                        <div class="col-md-12" style="margin-top:10px" id="fighterSelect">
+                            <div class="container2 fighter" id="fighter1">
+                                <img class="fighterImg" src="Assets/femaleWarrior.jpg" alt="Female Warrior" height="150px" width="150px">
+                                <div class="centered">Health:XX  Attack:X</div>
+                            </div>
+                            <div class="container2 fighter" id="fighter2">
+                                <img class="fighterImg" src="Assets/gateWarrior.jpg" alt="Gate Warrior" height="150px" width="150px">
+                                <div class="centered">Health:XX  Attack:X</div>
+                            </div>
+                            <div class="container2 fighter" id="fighter3">
+                                <img class="fighterImg" src="Assets/oldKnight.jpg" alt="Old Knight" height="150px" width="150px">
+                                <div class="centered">Health:XX  Attack:X</div>
+                            </div>
+
+                        </div>
+                        <div class="row" id="fighterVrs">
+                            <div class="col-md-6 chosenFighter">
+
+                            </div>
+                            <div class="col-md-6 enemyFighter">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 enemySelect">
+                    <div class="container2" id="skele1">
+                        <img class="enemy" src="Assets/skeleton1.jpg" alt="Skeleton 1" height="150px" width="150px">
+                        <div class="centered">Health:XX  Attack:X</div>
+                    </div>
+                    <div class="container2" id="skele2">
+                        <img class="enemy" src="Assets/skeleton2.jpg" alt="Skeleton 2" height="150px" width="150px">
+                        <div class="centered">Health:XX  Attack:X</div>
+                    </div>
+                    <div class="container2" id="skele3">
+                        <img class="enemy" src="Assets/skeleton3.jpg" alt="Skeleton 3" height="150px" width="150px">
+                        <div class="centered">Health:XX  Attack:X</div>
+                    </div>
+                    <div class="container2" id="skele4">
+                        <img class="enemy" src="Assets/skeleton4.jpg" alt="Skeleton 4" height="150px" width="150px">
+                        <div class="centered">Health:XX  Attack:X</div>
+                    </div>
+                    <div class="container2" id="skele5">
+                        <img class="enemy" src="Assets/skeleton5.jpg" alt="Skeleton 5" height="150px" width="150px">
+                        <div class="centered">Health:XX  Attack:X</div>
+                    </div>
+                    <div class="container2" id="skele6">                        
+                        <img class="enemy" src="Assets/skeleton6.jpg" alt="Skeleton 6" height="150px" width="150px">
+                        <div class="centered">Health:XX  Attack:X</div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="Assets/javascript/game.js"></script>
+
+</body>
+</html>
