@@ -1,4 +1,8 @@
-.container{
+.cards{
+    background-color:grey;
+}
+
+body{
     width: 1024px;
     height:600px;
     background-image: url(../arena.jpg);
@@ -16,22 +20,43 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: red;
-    width: 150px;
+    width: 200px;
     margin-top: 50px;
 }
 .container2 {
     margin-right: 10px;
     float: left;
-    width: 150px;
+    width: 200;
     position: relative;
     text-align: center;
     color: white;
     border-width: 2px;
     border-color: black;
-
 }
 
-#fighterSelect{
+.images{
+    float: left;
     height: 200px;
-    width: 600px;
+    width: 200px;
+}
+
+#restart{
+    margin-top: 50px;
+}
+
+#attack{
+    margin-top: 20px;
+}
+
+.selectedCard{
+    align-items: center;
+}
+
+.fighterSelected{
+    align-content: center;
+    -webkit-align-content: center;
+}
+
+#fighter1Image{
+    text-align: center;
 }

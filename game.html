@@ -4,70 +4,105 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Main Game</title>
-        <link rel="stylesheet" type="text/css" href="Assets/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+        <title>Main Game</title>        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
 </head>
 <body>
     <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="row" >
-                        <div class="col-md-12" style="margin-top:10px" id="fighterSelect">
-                            <div class="container2 fighter" id="fighter1">
-                                <img class="fighterImg" src="Assets/femaleWarrior.jpg" alt="Female Warrior" height="150px" width="150px">
-                                <div class="centered">Health:XX  Attack:X</div>
-                            </div>
-                            <div class="container2 fighter" id="fighter2">
-                                <img class="fighterImg" src="Assets/gateWarrior.jpg" alt="Gate Warrior" height="150px" width="150px">
-                                <div class="centered">Health:XX  Attack:X</div>
-                            </div>
-                            <div class="container2 fighter" id="fighter3">
-                                <img class="fighterImg" src="Assets/oldKnight.jpg" alt="Old Knight" height="150px" width="150px">
-                                <div class="centered">Health:XX  Attack:X</div>
-                            </div>
-
+        <div class="row hiddenRow">
+            <div class="col-md-4 fighterSpot">
+                    <div class="card text-center cards">
+                        <div class="card-block selectedCard">
+                            <h4 class="card-title fighterSelected">Chosen Fighter</h4>
                         </div>
-                        <div class="row" id="fighterVrs">
-                            <div class="col-md-6 chosenFighter">
-
-                            </div>
-                            <div class="col-md-6 enemyFighter">
-
-                            </div>
+                    </div>
+            </div>
+            <div class="col-md-1 attackButton" style="margin-right:20px;">
+                    <button type="button text-center center-block" class="btn btn-danger" id="attack" >Attack!</button>
+                    <div class="row">
+                        <div class="col-md-12" id="restart">
+                                <div id="restart"></div>
+                                <button type="button text-center center-block" class="btn btn-primary">Restart</button>
                         </div>
+                    </div>
+            </div>
+            <div class="col-md-4 ">
+                    <div class="card text-center cards">
+                            <div class="card-block">
+                                    <h4 class="card-title defenderSpan" >Current Defender</h4>
+                            </div>
+                    </div>
+            </div>
+            
+        </div>
+        <div class="row">
+                    <div class="col-md-6">
+                        <p class="message rounded" style="background: grey"></p>
                     </div>
                 </div>
-                <div class="col-md-4 enemySelect">
-                    <div class="container2" id="skele1">
-                        <img class="enemy" src="Assets/skeleton1.jpg" alt="Skeleton 1" height="150px" width="150px">
-                        <div class="centered">Health:XX  Attack:X</div>
-                    </div>
-                    <div class="container2" id="skele2">
-                        <img class="enemy" src="Assets/skeleton2.jpg" alt="Skeleton 2" height="150px" width="150px">
-                        <div class="centered">Health:XX  Attack:X</div>
-                    </div>
-                    <div class="container2" id="skele3">
-                        <img class="enemy" src="Assets/skeleton3.jpg" alt="Skeleton 3" height="150px" width="150px">
-                        <div class="centered">Health:XX  Attack:X</div>
-                    </div>
-                    <div class="container2" id="skele4">
-                        <img class="enemy" src="Assets/skeleton4.jpg" alt="Skeleton 4" height="150px" width="150px">
-                        <div class="centered">Health:XX  Attack:X</div>
-                    </div>
-                    <div class="container2" id="skele5">
-                        <img class="enemy" src="Assets/skeleton5.jpg" alt="Skeleton 5" height="150px" width="150px">
-                        <div class="centered">Health:XX  Attack:X</div>
-                    </div>
-                    <div class="container2" id="skele6">                        
-                        <img class="enemy" src="Assets/skeleton6.jpg" alt="Skeleton 6" height="150px" width="150px">
-                        <div class="centered">Health:XX  Attack:X</div>
-                    </div>
+            <div class="row">
+                <!-- game setup -->
+                <div class="col-md-12">
+                        <div class="card text-center center-block cards selected" style=" width: 860px; padding-left: 14px; padding-bottom:14px;">
+                                <div class="card-block">
+                                    <h4 class="card-title" >Fighter Select</h4>
+                                    <span class="availableCharacter femaleWarrior">
+                                        <div class="container2">
+                                                <img class="images" src="Assets/femaleWarrior.jpg" alt="Fighter 1" id= "fighter1Image" >
+                                                <div class="centered">Fighter 1
+                                                    <p>Health: <span class="health">120</span></p>
+                                                </div>
+                                        </div>
 
+
+                                    </span>
+                                    <span class="availableCharacter gateWarrior">
+                                            <div class="container2">
+                                                    <img class="images" src="Assets/gateWarrior.jpg" alt="Fighter 2" id= "fighter2Image">
+                                                    <div class="centered">Fighter 2
+                                                            <p>Health: <span class="health">100</span></p>
+                                                    </div>
+                                            </div>
+    
+    
+                                        </span>
+                                        <span class="availableCharacter oldKnight" >
+                                                <div class="container2">
+                                                        <img class="images" src="Assets/oldKnight.jpg" alt="Fighter 3" id= "fighter3Image" style=>
+                                                        <div class="centered">Fighter 3
+                                                                <p>Health: <span class="health">150</span></p>
+                                                        </div>
+                                                </div>
+        
+        
+                                            </span>
+                                            <span class="availableCharacter boss" >
+                                                    <div class="container2">
+                                                            <img class="images" src="Assets/boss.jpg" alt="Fighter 4" id= "fighter4Image">
+                                                            <div class="centered">Fighter 4
+                                                                    <p>Health: <span class="health">180</span></p>
+                                                            </div>
+                                                    </div>
+            
+            
+                                                </span>
+                                </div>
+                        </div>
                 </div>
             </div>
-    </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card text-center cards" style=" width: 860px; padding-left: 14px; padding-bottom:14px;">
+                            <div class="card-block">
+                                    <h4 class="card-title">Enemies</h4>
+                                    <div class="enemies"></div>                   
+                            </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="Assets/javascript/game.js"></script>
